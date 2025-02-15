@@ -1,0 +1,20 @@
+.track{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    
+
+}
+.button{
+    border-radius: 8px;
+    color: blue;
+    font-size: 1.2rem;
+    padding: 6px;
+}
+.songTitle{
+    text-align: start;
+}
