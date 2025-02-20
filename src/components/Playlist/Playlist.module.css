@@ -39,3 +39,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 768px){
+
+    .playlist{
+        width: 80%;
+    }
+}

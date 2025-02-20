@@ -39,4 +39,19 @@
     color: #a29bfe;
   }
   
+  @media screen and (max-width: 768px) {
+    .header {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
   
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .footer {
+      font-size: 0.7rem;
+    }
+  }
