@@ -3,7 +3,7 @@ import { encode } from './base64url';
 
 
 const clientId = '87a875039dec40d99d5cca6a27a59135';
-const redirectUri = 'http://localhost:5173/';
+const redirectUri = 'https://jammming-codeartistdev.netlify.app/';
 const scope = 'playlist-modify-public playlist-modify-private user-read-private user-read-email';
 
 
