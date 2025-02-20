@@ -18,11 +18,16 @@ const [playlistName, setPlaylistName] = useState('');
 
 useEffect(() => {
   handleCallback();
-}, []);
+  const savedSearchTerm = sessionStorage.getItem('searchTerm');
+  if(savedSearchTerm){
+    setSearchTrack(savedSearchTerm);
+  }
+  }, []);
  
 const handleSearch = async () => {
   const token = getAccessToken();
   if(!token){
+    sessionStorage.setItem('searchTerm', searchTrack)
     loginWithSpotify();
   }else{
   const results = await spotifySearch(searchTrack);
@@ -76,7 +81,7 @@ const handleLogOut = () => {
   return (
     <div className={styles.app}>
       <h1 className={styles.header}>Ja<span className={styles.mmm}>mmm</span>ing</h1>
-      <SearchBar setSearchTrack={setSearchTrack} handleSearch={handleSearch} />
+      <SearchBar setSearchTrack={setSearchTrack} handleSearch={handleSearch} searchTrack={searchTrack} />
       <div className={styles.mainContainer}>
         <SearchResults searchResults={searchResults} handleAdd={handleAdd}/>
         <Playlist playlist={playlist} setPlaylist={setPlaylist} playlistName={playlistName} setPlaylistName={setPlaylistName} handleRemove={handleRemove} handleSavePlaylist={handleSavePlaylist} handleLogOut={handleLogOut} />
