@@ -8,3 +8,10 @@
     min-height: 40vh;
     margin-right: 40px;
 }
+@media(max-width: 768px){
+    .searchResults{
+        width: 80%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
